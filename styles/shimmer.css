@@ -1,0 +1,31 @@
+.shimmer-row {
+  height: 50px;
+  background: #f6f7f8;
+  margin-bottom: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-row::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -150%;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    transparent 100%
+  );
+  animation: shimmer 1.5s infinite;
+}
+
+.shimmer-cell {
+  display: inline-block;
+  height: 20px;
+  margin: 15px 0;
+  background: #ddd;
+  border-radius: 4px;
+}

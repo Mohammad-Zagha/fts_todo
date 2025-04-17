@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.top-bar {
+  padding: 10px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.top-bar div {
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  gap: 8px;
+}
+
+.top-bar input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.add-button {
+  color: #fff;
+  border-radius: 6px;
+  background-color: red;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.add-button:hover {
+  background-color: #cc0000;
+}
+
+/* Table container for horizontal scrolling */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 10px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  min-width: 600px; /* Minimum width to ensure all columns are visible when scrolling */
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #e9ecef;
+}
+
+thead tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+tbody {
+  display: block;
+  max-height: 300px; /* Fixed height - adjust as needed */
+  overflow-y: auto;
+  width: 100%;
+}
+
+tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border-bottom: 1px solid #ccc;
+}
+
+tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+thead th {
+  padding: 12px 8px;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 1px solid #ccc;
+}
+
+tbody td {
+  padding: 12px 8px;
+  word-break: break-word;
+}
+
+/* Column widths */
+th:nth-child(1),
+td:nth-child(1) {
+  width: 10%;
+} /* ID */
+th:nth-child(2),
+td:nth-child(2) {
+  width: 40%;
+} /* Description */
+th:nth-child(3),
+td:nth-child(3) {
+  width: 10%;
+} /* User ID */
+th:nth-child(4),
+td:nth-child(4) {
+  width: 15%;
+} /* Status */
+th:nth-child(5),
+td:nth-child(5) {
+  width: 25%;
+} /* Actions */
+
+/* Action button styling */
+.action-buttons {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.delete-button,
+.done-button {
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  border: none;
+  color: #fff;
+}
+
+.delete-button {
+  background-color: #dc3545;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+.done-button {
+  background-color: #28a745;
+}
+
+.done-button:hover {
+  background-color: #218838;
+}
+
+.footer-info {
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+@keyframes shimmer {
+  0% {
+    right: -150%;
+  }
+  100% {
+    right: 100%;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .delete-button,
+  .done-button {
+    padding: 4px 8px;
+    font-size: 12px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-input {
+    width: 100%;
+  }
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+}
